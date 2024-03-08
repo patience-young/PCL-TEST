@@ -1,0 +1,5 @@
+add_subdirectory(extract_indices)
+add_subdirectory(project_inliers)
+add_subdirectory(remove_outliers)
+add_subdirectory(statistical_removal)
+add_subdirectory(voxel_grid)

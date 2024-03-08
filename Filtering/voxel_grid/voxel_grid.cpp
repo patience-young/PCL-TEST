@@ -11,7 +11,7 @@ int main ()
   // Fill in the cloud data
   pcl::PCDReader reader;
   // Replace the path below with the path where you saved your file
-  reader.read ("../rabbit.pcd", *cloud); // Remember to download the file first!
+  reader.read ("../../pcd_files/rabbit.pcd", *cloud); // Remember to download the file first!
 
   std::cerr << "PointCloud before filtering: " << cloud->width * cloud->height 
        << " data points (" << pcl::getFieldsList (*cloud) << ")." << std::endl;
@@ -26,7 +26,7 @@ int main ()
        << " data points (" << pcl::getFieldsList (*cloud_filtered) << ")." << std::endl;
 
   pcl::PCDWriter writer;
-  writer.write ("../rabbit_downsampled.pcd", *cloud_filtered, 
+  writer.write ("../../pcd_files/rabbit_downsampled.pcd", *cloud_filtered, 
          Eigen::Vector4f::Zero (), Eigen::Quaternionf::Identity (), false);
 
   return (0);

@@ -1,0 +1,10 @@
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/build/bin)
+
+add_subdirectory(Features)
+add_subdirectory(Filtering)
+add_subdirectory(KdTree)
+add_subdirectory(Keypoints)
+add_subdirectory(octree)
+add_subdirectory(random_sample_consensus)
+add_subdirectory(RangeImages)
+add_subdirectory(Visualization)
