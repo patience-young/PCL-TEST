@@ -17,7 +17,7 @@ int main ()
 
   // Fill in the cloud data
   pcl::PCDReader reader;
-  reader.read ("../table_scene_lms400.pcd", *cloud_blob);
+  reader.read ("../../pcd_files/table_scene_lms400.pcd", *cloud_blob);
 
   std::cerr << "PointCloud before filtering: " << cloud_blob->width * cloud_blob->height << " data points." << std::endl;
 
@@ -34,7 +34,7 @@ int main ()
 
   // Write the downsampled version to disk
   pcl::PCDWriter writer;
-  writer.write<pcl::PointXYZ> ("../table_scene_lms400_downsampled.pcd", *cloud_filtered, false);
+  writer.write<pcl::PointXYZ> ("../../pcd_files/table_scene_lms400_downsampled.pcd", *cloud_filtered, false);
 
   pcl::ModelCoefficients::Ptr coefficients (new pcl::ModelCoefficients ());
   pcl::PointIndices::Ptr inliers (new pcl::PointIndices ());
@@ -76,7 +76,7 @@ int main ()
     *cloud_planes += *cloud_p;
 
     std::stringstream ss;
-    ss << "../table_scene_lms400_plane_" << i << ".pcd";
+    ss << "../../pcd_files/table_scene_lms400_plane_" << i << ".pcd";
     writer.write<pcl::PointXYZ> (ss.str (), *cloud_p, false);
 
     // Create the filtering object
@@ -87,7 +87,7 @@ int main ()
   }
 
   std::cerr << "PointCloud representing the planars component: " << cloud_planes->width * cloud_planes->height << " data points." << std::endl;
-  writer.write<pcl::PointXYZ> ("../table_scene_lms400_planes.pcd", *cloud_planes, false);
+  writer.write<pcl::PointXYZ> ("../../pcd_files/table_scene_lms400_planes.pcd", *cloud_planes, false);
 
   return (0);
 }

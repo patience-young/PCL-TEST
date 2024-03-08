@@ -10,7 +10,7 @@ int main()
 {
 	//------------------加载点云数据-------------------
 	pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
-	if (pcl::io::loadPCDFile<pcl::PointXYZ>("../rabbit.pcd", *cloud) == -1)
+	if (pcl::io::loadPCDFile<pcl::PointXYZ>("../../pcd_files/rabbit.pcd", *cloud) == -1)
 	{
 		PCL_ERROR("Could not read file\n");
 	}
