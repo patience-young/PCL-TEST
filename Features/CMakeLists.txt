@@ -1,2 +1,3 @@
 add_subdirectory(NormalEstimation)
 add_subdirectory(PFH)
+add_subdirectory(FPFH)
