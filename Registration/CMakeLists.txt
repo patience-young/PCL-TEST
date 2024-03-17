@@ -10,3 +10,6 @@ add_definitions(${PCL_DEFINITIONS})
 
 add_executable (iterative_closest_point src/iterative_closest_point.cpp)
 target_link_libraries (iterative_closest_point ${PCL_LIBRARIES})
+
+add_executable (pairwise_incremental_registration src/pairwise_incremental_registration.cpp)
+target_link_libraries (pairwise_incremental_registration ${PCL_LIBRARIES})
