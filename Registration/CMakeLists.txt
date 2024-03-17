@@ -13,3 +13,6 @@ target_link_libraries (iterative_closest_point ${PCL_LIBRARIES})
 
 add_executable (pairwise_incremental_registration src/pairwise_incremental_registration.cpp)
 target_link_libraries (pairwise_incremental_registration ${PCL_LIBRARIES})
+
+add_executable (interactive_icp src/interactive_icp.cpp)
+target_link_libraries (interactive_icp ${PCL_LIBRARIES})
