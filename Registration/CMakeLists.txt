@@ -16,3 +16,6 @@ target_link_libraries (pairwise_incremental_registration ${PCL_LIBRARIES})
 
 add_executable (interactive_icp src/interactive_icp.cpp)
 target_link_libraries (interactive_icp ${PCL_LIBRARIES})
+
+add_executable(normal_distributions_transform src/normal_distributions_transform.cpp)
+target_link_libraries (normal_distributions_transform ${PCL_LIBRARIES})
