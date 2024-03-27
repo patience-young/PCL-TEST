@@ -10,3 +10,6 @@ add_definitions(${PCL_DEFINITIONS})
 
 add_executable (planar_segmentation src/planar_segmentation.cpp)
 target_link_libraries (planar_segmentation ${PCL_LIBRARIES})
+
+add_executable (cluster_extraction src/cluster_extraction.cpp)
+target_link_libraries (cluster_extraction ${PCL_LIBRARIES})
