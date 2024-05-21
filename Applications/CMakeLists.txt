@@ -10,3 +10,17 @@ add_definitions(${PCL_DEFINITIONS})
 
 add_executable (template_alignment src/template_alignment.cpp)
 target_link_libraries (template_alignment ${PCL_LIBRARIES})
+
+find_package(HDF5 REQUIRED)
+find_package(FLANN REQUIRED)
+
+include_directories(SYSTEM
+  ${HDF5_INCLUDE_DIR}
+)
+
+add_executable(build_tree src/build_tree.cpp)
+target_link_libraries(build_tree ${PCL_LIBRARIES} ${Boost_LIBRARIES}
+                                 FLANN::FLANN ${HDF5_LIBRARIES})
+
+add_executable(nearest_neighbors src/nearest_neighbors.cpp)
+target_link_libraries(nearest_neighbors ${PCL_LIBRARIES} ${Boost_LIBRARIES} FLANN::FLANN ${HDF5_LIBRARIES})
